@@ -2,7 +2,7 @@ import  { useState, useCallback } from 'react';
 import Table from './components/table';
 import dataset from './db/data';
 import './index.css';
-import './App,css';
+import './App.css';
 function App() {
   const [ data, setData ] = useState(dataset.map(elemId => ({id: elemId.id, data: elemId['mwt']}) ));
   const [ elemId, setElemId ] = useState(0);

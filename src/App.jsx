@@ -1,7 +1,7 @@
 import  { useState, useCallback } from 'react';
 import Table from './components/table';
 import dataset from './db/data';
-import './App.css';
+import './index.css';
 
 function App() {
   const [ data, setData ] = useState(dataset.map(elemId => ({id: elemId.id, data: elemId['mwt']}) ));
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App" style={{width: '90%', margin: 'auto'}} onClick={clearHighlight}>
       <div style={{marginLeft: 30, marginBottom: 10}}>
-        <h1>Periodic Table-2024</h1>
+        <h1>Periodic Table</h1>
         <span>
           Data: 
           <select className="elem" id="dataSelection" onChange={selectData}>
@@ -47,4 +47,4 @@ function App() {
   );
 }
 
-export default App;   
+export default App;  

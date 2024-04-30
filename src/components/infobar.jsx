@@ -1,7 +1,5 @@
-import {useState} from 'react';
+import  { useState} from 'react';
 import PropTypes from 'prop-types';
-
-
 const InfoBar = ({dataset}) => {
   const [heat, setHeat] = useState('heatSpecific');
   const [radius, setRadius] = useState('calcAtomRad');
@@ -12,7 +10,7 @@ const InfoBar = ({dataset}) => {
   const selectCond = (e) => setCond(e.target.value);
   const selectIoniz = (e) => setIoniz(e.target.value);
 
-  const clearGroupHighlight = (e) => {
+  const clearGroupHighlight = () => {
     let boxes = [...document.getElementsByClassName('muteBox')];
     boxes.forEach(box => box.classList.remove('muteBox') )
   }
@@ -130,9 +128,9 @@ const InfoBar = ({dataset}) => {
         </div> 
   )
 };
-InfoBar.propTypes = {
-  dataset: PropTypes.array.isRequired,
-};
 
+InfoBar.propTypes = {
+  dataset: PropTypes.object.isRequired,
+};
 
 export default InfoBar;
